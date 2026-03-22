@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://6u5wblte280y"]
+
+[sub_resource type="PrismMesh" id="PrismMesh_g5ubp"]
+size = Vector3(5, 1.5, 4)
+
+[node name="home" type="Node3D" unique_id=1391279517]
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1216632289]
+
+[node name="Camera3D" type="Camera3D" parent="DirectionalLight3D" unique_id=1070664122]
+
+[node name="BASE" type="CSGBox3D" parent="." unique_id=2012431761]
+size = Vector3(5, 0.3, 4)
+
+[node name="step" type="CSGBox3D" parent="." unique_id=960200791]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.225, 2.225)
+size = Vector3(1.2, 0.15, 0.5)
+
+[node name="walls" type="CSGBox3D" parent="." unique_id=766134123]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, 0)
+use_collision = true
+size = Vector3(4.6, 2.5, 3.6)
+
+[node name="door hole" type="CSGBox3D" parent="walls" unique_id=880185653]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.25, 1.85)
+operation = 2
+size = Vector3(0.9, 1.6425781, 0.6)
+
+[node name="windowhole" type="CSGBox3D" parent="walls" unique_id=311365273]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, -0.1, 1.85)
+operation = 2
+size = Vector3(1, 0.9, 0.6)
+
+[node name="window hole 2" type="CSGBox3D" parent="walls" unique_id=948326660]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, -0.1, 1.85)
+operation = 2
+size = Vector3(1, 0.9, 0.6)
+
+[node name="door frame" type="CSGBox3D" parent="." unique_id=580458220]
+transform = Transform3D(0.99999994, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 0, 1.15, 1.88)
+size = Vector3(1.1, 1.8, 0.15)
+
+[node name="windowframe" type="CSGBox3D" parent="." unique_id=819304323]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.4, 1.3, 1.88)
+size = Vector3(1.2, 1.1, 0.15)
+
+[node name="window frame" type="CSGBox3D" parent="." unique_id=1999265638]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4, 1.3, 1.88)
+size = Vector3(1.2, 1.2, 0.15)
+
+[node name="roof" type="CSGMesh3D" parent="." unique_id=1296953118]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 3.4, 0)
+use_collision = true
+mesh = SubResource("PrismMesh_g5ubp")
+
+[node name="lwall" type="CSGBox3D" parent="." unique_id=1188660458]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.38, 1.4, 0)
+size = Vector3(0.15, 2.5, 3.6)
+
+[node name="rwall" type="CSGBox3D" parent="." unique_id=1853424779]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38, 1.4, 0)
+size = Vector3(0.15, 2.5, 3.6)
+
+[node name="bwall" type="CSGBox3D" parent="." unique_id=28633184]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4, -1.88)
+size = Vector3(4.6, 2.5, 0.15)
+
+[node name="rooms" type="Node3D" parent="." unique_id=804918092]
+
+[node name="CSGBox3D" type="CSGBox3D" parent="rooms" unique_id=1607956120]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 1.4, 0)
+use_collision = true
+size = Vector3(0.15, 2.5, 3.6)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="rooms" unique_id=1435233901]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.8, 1.4, 0)
+use_collision = true
+size = Vector3(0.15, 2.5, 3.6)
+
+[node name="ftin" type="CSGBox3D" parent="." unique_id=1465825125]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.7, 0.46)
+size = Vector3(0.9, 1.4, 0.08)
+
+[node name="btin" type="CSGBox3D" parent="." unique_id=346628996]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5, 0.7, -0.46)
+size = Vector3(0.9, 1.4, 0.08)
+
+[node name="ltin" type="CSGBox3D" parent="." unique_id=533998965]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.96, 0.7, 0)
+size = Vector3(0.09, 1.4, 0.9)
+
+[node name="rtin" type="CSGBox3D" parent="." unique_id=1731266541]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.04, 0.7, 0)
+size = Vector3(0.08, 1.4, 0.9)
+
+[node name="road1" type="CSGBox3D" parent="." unique_id=1151610744]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.025, 3.25)
+size = Vector3(1.5, 0.05, 2)
+
+[node name="road2" type="CSGBox3D" parent="." unique_id=1698472246]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.99999994, 6.8215456, 0.064343356, 4.820362)
+size = Vector3(15, 0.05, 2)
+
+[node name="lab" type="Node3D" parent="." unique_id=1288499748]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 18.3, 0.025, 5)
+
+[node name="base" type="CSGBox3D" parent="lab" unique_id=417067389]
+size = Vector3(8, 0.3, 6)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="lab" unique_id=1785736228]
+transform = Transform3D(0.9999989, 0.0011940952, -0.00085170707, -0.0011954391, 0.99999803, -0.001590886, 0.00084981974, 0.0015918949, 0.99999833, 0, 1.55, 0.5)
+use_collision = true
+size = Vector3(8, 2.8, 4)
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="lab" unique_id=1680698045]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.25, 1.55, -1.9)
+use_collision = true
+size = Vector3(3.5, 2.8, 2.2)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="lab" unique_id=826774713]
+transform = Transform3D(0.99983114, 0.00068588636, -0.018364675, -0.0006561084, 0.99999845, 0.0016273623, 0.018365763, -0.0016150374, 0.99983, -4.4077435, 0.15535924, -0.15756845)
+size = Vector3(0.5, 0.25, 1.5)
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="lab" unique_id=1539363630]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, 2.58)
+use_collision = true
+size = Vector3(8, 2.8, 0.15)
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="lab" unique_id=1738592682]
+transform = Transform3D(1, 0, 0, 0, -0.9998739, -0.015881738, 0, 0.015881738, -0.9998739, -3.901801, 1.4619176, 0.5199022)
+use_collision = true
+size = Vector3(0.15, 2.8, 4)
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="lab" unique_id=210175099]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.0599995, 1.6, -0.07452345)
+use_collision = true
+size = Vector3(0.15, 2.8, 5.5)
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="lab" unique_id=286417373]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.55, -1.3711276)
+use_collision = true
+size = Vector3(8, 2.8, 0.15)
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="lab" unique_id=568678346]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 1.55, -1.9)
+size = Vector3(0.15, 2.8, 2.2)
