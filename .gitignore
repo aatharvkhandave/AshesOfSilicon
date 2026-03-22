@@ -3,6 +3,11 @@
 *.import
 export_presets.cfg
 
-# System ignores
+# System and IDE ignores
+.vscode/
 Thumbs.db
 .DS_Store
+
+# Build artifacts
+build/
+bin/
